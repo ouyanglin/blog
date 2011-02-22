@@ -96,5 +96,41 @@ describe User do
         end
       end
     end
+
+    describe "Updating attributes" do
+
+      before(:each) do
+        @user.update_attributes(:password              => "boofar",
+                                :password_confirmation => "boofar")
+      end
+
+      it "should have a new password 'boofar'" do
+        @user.has_password?("boofar").should be_true
+      end
+
+      it "should update the attributes without changing the password" do
+        new_instance = User.find_by_email(@attr[:email])
+        new_instance.update_attributes(:display_name => "TeamLRAM",
+                                       :email        => "user@example.org")
+        new_instance.has_password?("boofar").should be_true
+      end
+    end
+  end
+
+  describe "post associations" do
+
+    before(:each) do
+      @user = User.create(@attr)
+      @post1 = Factory(:post, :user => @user, :created_at => 1.day.ago)
+      @post2 = Factory(:post, :user => @user, :created_at => 1.hour.ago)
+    end
+
+    it "should have a posts attribute" do
+      @user.should respond_to(:posts)
+    end
+
+    it "should have the right post in the right order" do
+      @user.posts.should == [@post2, @post1]
+    end
   end
 end

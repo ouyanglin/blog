@@ -3,6 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @title = "Home"
+    @posts = current_user.posts
   end
 
   def about
