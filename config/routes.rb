@@ -1,5 +1,9 @@
 Blog::Application.routes.draw do
-  get "users/new"
+  resources :sessions, :only => [:new, :create, :destroy]
+  resources :users
+
+  match '/signin'  => 'sessions#new'
+  match '/signout' => 'sessions#destroy'
 
   match '/about' => 'pages#about'
   match '/dashboard' => 'pages#dashboard'

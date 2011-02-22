@@ -1,4 +1,8 @@
 Blog::Application.routes.draw do
+  get "sessions/new"
+
+  get "users/new"
+
   match '/about' => 'pages#about'
   match '/dashboard' => 'pages#dashboard'
 
