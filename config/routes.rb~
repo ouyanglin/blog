@@ -1,7 +1,17 @@
 Blog::Application.routes.draw do
-  get "sessions/new"
+  get "posts/create"
 
-  get "users/new"
+  get "posts/destroy"
+
+  get "posts/show"
+
+  get "posts/edit"
+
+  resources :sessions, :only => [:new, :create, :destroy]
+  resources :users
+
+  match '/signin'  => 'sessions#new'
+  match '/signout' => 'sessions#destroy'
 
   match '/about' => 'pages#about'
   match '/dashboard' => 'pages#dashboard'

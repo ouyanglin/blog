@@ -1,5 +1,5 @@
 <div class="content">
   <h2>Dashboard</h2>
-  <p><%= link_to "Create a new post!", '/posts/new' %></p>
+  <p><%= link_to "Create a new post!", posts_new_path %></p>
   //Insert code on listing posts
 </div>

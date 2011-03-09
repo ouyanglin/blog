@@ -1,0 +1,13 @@
+<div class="content">
+  <h2>Create a new post</h2>
+  <%= form_for @post do |f| %>
+    <%= render 'shared/error_messages', :object => f.object %>
+    <h3>Title</h3>
+    <%= f.text_area :title %><br />
+    <h3>Body</h3>
+    <%= f.text_area :body %><br />
+    <h3>Labels</h3>
+    <%= f.text_area :labels %><br />
+    <%= f.submit "Submit" %>
+  <% end %>
+</div>

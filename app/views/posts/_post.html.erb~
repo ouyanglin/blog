@@ -1,0 +1,15 @@
+<div class="content">
+  <h2 class="post_title"><a href="/#"><%= post.title %></a></h2>
+  <%= raw(post.body) %>
+  <div class="post_footer">
+    <ul class="tag">
+      <li>Personal</li>
+      <li>Cherrylet</li>
+    </ul>
+  <div class="comments"><%= link_to "0 Comments", '/#' %></div>
+  </div>
+  <div class="date">
+    <%= post.created_at.strftime("%B %e") %><br />
+    <%= post.created_at.strftime("%Y") %>
+  </div>
+</div>

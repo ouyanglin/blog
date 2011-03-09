@@ -1,10 +1,8 @@
 body {
   margin: 0;
   font-family: "Lucida Sans Unicode", Helvetica, sans-serif;
-  font-size: 0.875em;
+  font-size: 0.75em;
   height: 100%;
-  overflow: hidden;
-  /* background-color: #FAFCFF; */
   padding: 0px 20px;
 }
 
@@ -20,18 +18,17 @@ h1, h2 {
   padding: 5px 0px;
 }
 
-#title {
-  margin: 25px 0px 25px 20px;
-  border-bottom: 1px solid #B6D5FF;
+header {
+  padding: 15px 0px 20px 50px;
+  background: url('/images/diagonal.png') repeat-x;
 }
 
 #sidebar {
-  width: 160px;
-  float: left;
-  margin-right: 20px;
-  padding: 20px;
+  width: 210px;
+  float: right;
+  padding: 13px 0px;
   background-color: #FFF;
-  border: 1px solid #B6D5FF;
+  /*border: 1px solid #B6D5FF;*/
 }
 
 #navigation {
@@ -40,56 +37,44 @@ h1, h2 {
   list-style-type: lower-alpha;
 }
 
-#content {
-  float: left;
-}
-
-div.post {
-  width: 660px;
-  padding: 20px;
-  background-color: #FFF;
-  height: 100%;
-  overflow: hidden;
-  border: 1px solid #B6D5FF;
-  margin-bottom: 20px;
-}
-
-div.left {
-  width: 80px;
-  float: left;
-}
-
-div.day {
-  font-size: 40px;
-  font-weight: 900;
-  text-align: center;
-  width: 70px;
-  height: 60px;
-  color: #FFF;
-  background-color: red;
-  margin-left: auto;
+#container {
+  width: 785px;
   margin-right: auto;
-  padding-top: 5px;
+  margin-left: auto;
+  margin-top: 100px;
+}
+
+#main {
+  float: left;
+  padding-left: 50px;
+  background-image: url('/images/background-left.png');
+  background-repeat: repeat-y;
+}
+
+div.content {
+  width: 505px;
+  padding: 13px 0px 10px 0px;
+  height: 100%;
+  /*border: 1px solid #B6D5FF;*/
+  margin-bottom: 20px;
+  position: relative;
 }
 
 div.date {
-  font-weight: 900;
-  margin-top: 10px;
-  text-align: center;
-}
-
-div.right {
-  width: 560px;
-  float: right;
-  margin-left: 20px;
+  font-size: 10px;
+  font-weight: bold;
+  background: url('/images/yellow-tag.png') no-repeat left top;
+  width: 80px;
+  height: 40px;
+  position:absolute;
+  left: -125px;
+  top: 10px;
+  padding: 5px 40px 0px 0px;
+  text-align: right;
 }
 
 h2.post_title, #sidebar h2 {
   border-top: 1px dotted #000;
   border-bottom: 1px dotted #000;
-}
-
-header {
-  width: 924px;
 }
 

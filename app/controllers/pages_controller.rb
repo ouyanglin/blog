@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @title = "Home"
-    @posts = current_user.posts
+    @posts = Post.all
   end
 
   def about
@@ -12,6 +12,7 @@ class PagesController < ApplicationController
 
   def dashboard
     @title = "Dashboard"
+    @posts = Post.all
   end
 
   private
