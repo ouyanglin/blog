@@ -1,5 +1,17 @@
 <div class="content">
   <h2>Dashboard</h2>
   <p><%= link_to "Create a new post!", '/posts/new' %></p>
-  //Insert code on listing posts
+  <ol id="post_list">
+    <% for p in @posts %>
+      <li>
+      <div class="li_date"><%= p.created_at.strftime("%m/%d/%y") %>
+      &nbsp;&nbsp;&nbsp;</div>
+      <div class="li_title"><%= p.title %></div>
+      <div class="li_links">
+        <%= link_to "edit", edit_post_path(p) %>
+        | <%= link_to "delete", p, :method => :delete,:confirm => "You sure?",
+          :title => "Delete #{p.title}" %>
+      </div></li>
+    <% end %>
+  </ol>
 </div>

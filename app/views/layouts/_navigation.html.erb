@@ -1,0 +1,30 @@
+<% if signed_in? %>
+  <h2>Menu</h2>
+  <ol id="navigation">
+    <li><%= link_to "Home", root_path %></li>
+    <li><%= link_to "About", about_path %></li>
+    <li><%= link_to "Dashboard", dashboard_path %></li>
+    <li><%= link_to "Sign out", signout_path %></li>
+  </ol>
+<% else %>
+  <h2>About</h2>
+  <p>This blog is</p>
+  <ol id="about">
+    <li>an exercise in web programming,</li>
+    <li>a foray into a post-Xanga blogosphere, &#38;</li>
+    <li>an eclectic collection of naive personal opinions from a recent college grad.</li>
+  </ol>
+  <p>My interests span from web technology to finance to math to 
+  Asian-American culture. Click <%= link_to "here", about_path %></li> if 
+  you want to learn more.</p>
+<% end %>
+
+<h2>Tags</h2>
+<br />
+<ul class="tag">
+  <li>Personal</li>
+  <li>Web Programming</li>
+  <li>Mathematics</li>
+  <li>Music</li>
+</ul>
+   

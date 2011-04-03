@@ -4,31 +4,36 @@ body {
   font-size: 0.75em;
   height: 100%;
   padding: 0px 20px;
+  background-color: #e8e8e2;
 }
 
 a {
   text-decoration: none;
-  color: #000;
   background-color: #FFF;
+  color: #2F1454;
 }
 
 h1, h2 {
   font-family: "Georgia", "Times New Roman", serif;
   margin: 0px;
   padding: 5px 0px;
+  color: #2F1454;
 }
 
 header {
-  padding: 15px 0px 20px 50px;
+  padding: 15px 25px;
   background: url('/images/diagonal.png') repeat-x;
 }
 
+label {
+  font-weight: bold;
+}
+
 #sidebar {
-  width: 210px;
+  width: 205px;
   float: right;
-  padding: 13px 0px;
+  padding: 13px 25px 0px 0px;
   background-color: #FFF;
-  /*border: 1px solid #B6D5FF;*/
 }
 
 #navigation {
@@ -37,40 +42,38 @@ header {
   list-style-type: lower-alpha;
 }
 
+#about {
+  padding-left: 20px;
+  list-style: lower-roman outside;
+}
+
 #container {
   width: 785px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 100px;
+  margin-top: 50px;
+  background-color: #FFF;
+  overflow: auto;
+  min-height: 800px;
+  z-index: -1;
 }
 
 #main {
   float: left;
-  padding-left: 50px;
-  background-image: url('/images/background-left.png');
-  background-repeat: repeat-y;
+  padding: 0px 25px;
 }
 
 div.content {
   width: 505px;
   padding: 13px 0px 10px 0px;
   height: 100%;
-  /*border: 1px solid #B6D5FF;*/
   margin-bottom: 20px;
   position: relative;
 }
 
-div.date {
-  font-size: 10px;
-  font-weight: bold;
-  background: url('/images/yellow-tag.png') no-repeat left top;
-  width: 80px;
-  height: 40px;
-  position:absolute;
-  left: -125px;
-  top: 10px;
-  padding: 5px 40px 0px 0px;
-  text-align: right;
+span.post_date {
+  font-size: 0.75em;
+  color: #484848;
 }
 
 h2.post_title, #sidebar h2 {
@@ -78,3 +81,52 @@ h2.post_title, #sidebar h2 {
   border-bottom: 1px dotted #000;
 }
 
+#post_title, #post_body, #post_labels {
+  width: 400px;
+  font-family: "lucida sans unicode", Helvetica, Arial, sans-serif;
+}
+
+ul.tag {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+.tag li {
+  display: inline-block;
+  padding: 0px 5px;
+  margin: 2px 0px;
+  background-color: black;
+  color: white;
+}
+
+#post_list {
+  list-style-type: none;
+  padding: 0px;
+}
+
+#post_list li {
+  padding: 2px 0px;
+  height: 100%;
+  overflow: auto;
+}
+
+div.li_date {
+  float: left;
+}
+
+div.li_title {
+  float: left;
+  font-weight: bold;
+}
+
+div.li_links {
+  float: right;
+  font-style: underline;
+}
+div.comments {
+  float: right;
+  margin-left: auto;
+  font-weight: bold;
+}
