@@ -23,6 +23,8 @@ h1, h2 {
 header {
   padding: 15px 25px;
   background: url('/images/diagonal.png') repeat-x;
+  float: left;
+  width: 100%;
 }
 
 label {

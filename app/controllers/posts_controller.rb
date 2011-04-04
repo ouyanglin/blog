@@ -2,8 +2,17 @@ class PostsController < ApplicationController
   before_filter :authenticate, :only => [:create, :destroy, :edit, :update]
   def create
     @post = current_user.posts.build(params[:post])
+    label = params[:post][:label].split(', ')
     if @post.save
       flash[:success] = "Post created!"
+      for l in label
+        if !Label.find_by_label_name(l)
+          tag=Label.create!(:label_name => l)
+        else
+          tag=Label.find_by_label_name(l)
+        end
+        @post.label_posts.create!(:label_id => tag.id)
+      end
       redirect_to root_path
     else
       flash[:error] = "Omo! There was an error"

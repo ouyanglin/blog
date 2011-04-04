@@ -20,6 +20,7 @@
 <% end %>
 
 <h2>Tags</h2>
+<br />
 <ul class="tag">
   <li>Personal</li>
   <li>Web Programming</li>

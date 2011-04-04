@@ -1,3 +1,4 @@
 class Label < ActiveRecord::Base
-  has_many :post
+  has_many :label_posts, :foreign_key => "post_id", :dependent => :destroy
+  has_many :posts, :through => :label_posts, :source => :post
 end

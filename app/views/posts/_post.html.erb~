@@ -6,7 +6,7 @@
   <%= raw(post.body) %>
   <div class="post_footer">
     <ul class="tag">
-      <% for l in post.labels.split(', ') %>
+      <% for l in post.labels %>
         <li><%= l %></li>
       <% end %>
     </ul>

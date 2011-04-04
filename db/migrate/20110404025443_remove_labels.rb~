@@ -1,0 +1,9 @@
+class RemoveLabels < ActiveRecord::Migration
+  def self.up
+    remove_column :post, :labels
+  end
+
+  def self.down
+    add_column :post, :labels
+  end
+end

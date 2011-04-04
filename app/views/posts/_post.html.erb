@@ -6,8 +6,8 @@
   <%= raw(post.body) %>
   <div class="post_footer">
     <ul class="tag">
-      <% for l in post.labels.split(', ') %>
-        <li><%= l %></li>
+      <% for l in post.labels %>
+        <li><%= l.label_name %></li>
       <% end %>
     </ul>
   <div class="comments"><%= link_to "0 Comments", '/#' %></div>

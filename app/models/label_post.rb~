@@ -1,0 +1,3 @@
+class LabelPost < ActiveRecord::Base
+  attr_accessible :post_id, :label_id
+end
