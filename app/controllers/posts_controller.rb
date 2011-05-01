@@ -21,12 +21,21 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    Post.find(params[:id]).destroy
+    p = Post.find(params[:id])
+    label = p.labels
+    for l in label
+      if l.posts.count <= 1
+        l.destroy
+      end
+    end
+    p.destroy
     flash[:success] = "Post destroyed."
     redirect_to dashboard_path
   end
 
   def show
+    @post = Post.find(params[:id])
+    @title = @post.title
   end
 
   def edit

@@ -9,11 +9,11 @@
     <div id="container">
       <header><h1 id="title"><%= link_to "Exercise 1.1:", root_path %>
       </h1></header>
-      <div id="sidebar">
-        <%= render 'layouts/navigation' %>
-      </div>
       <div id="main">
         <%= yield %>
+      </div>
+      <div id="sidebar">
+        <%= render 'layouts/navigation' %>
       </div>
     </div>
   </body>

@@ -24,7 +24,7 @@
 <ul class="tag">
   <% labels = Label.all %>
   <% for l in labels %>
-    <li><%= l.label_name %></li>
+    <li><%= link_to l.label_name, label_path(l) %></li>
   <% end %>
 </ul>
    

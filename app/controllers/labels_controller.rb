@@ -3,7 +3,7 @@ class LabelsController < ApplicationController
   def show
     label = Label.find(params[:id])
     @title = label.label_name
-    @post = label.posts
+    @posts = label.posts
     render 'pages/home'
   end
 

@@ -1,20 +1,15 @@
 Blog::Application.routes.draw do
-  get "posts/create"
-
-  get "posts/destroy"
-
-  get "posts/show"
-
-  get "posts/edit"
-
   resources :sessions, :only => [:new, :create, :destroy]
   resources :users
+  resources :posts
 
   match '/signin'  => 'sessions#new'
   match '/signout' => 'sessions#destroy'
 
   match '/about' => 'pages#about'
   match '/dashboard' => 'pages#dashboard'
+
+  match '/labels/:id' => 'labels#show'
 
   root :to => "pages#home"
 end

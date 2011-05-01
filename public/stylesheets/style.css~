@@ -1,22 +1,31 @@
+html {
+  background: #697fa4 url('/images/bg-gradient.jpg') repeat-x left top;
+} 
+
 body {
   margin: 0;
   font-family: "Lucida Sans Unicode", Helvetica, sans-serif;
   font-size: 0.75em;
   height: 100%;
   padding: 0px 20px;
-  background-color: #e8e8e2;
 }
 
 a {
   text-decoration: none;
   background-color: #FFF;
-  color: #2F1454;
+  color: blue;
+  /* color: #2F1454; */
 }
 
 h1, h2 {
   font-family: "Georgia", "Times New Roman", serif;
   margin: 0px;
   padding: 5px 0px;
+  color: #2F1454;
+  text-shadow: 0.1em 0.1em #e8e8e2;
+}
+
+h1 a, h2 a, .comments a {
   color: #2F1454;
 }
 
@@ -30,9 +39,9 @@ label {
 }
 
 #sidebar {
-  width: 205px;
-  float: right;
-  padding: 13px 25px 0px 0px;
+  width: 235px;
+  float: left;
+  padding: 0px 25px 0px 0px;
   background-color: #FFF;
 }
 
@@ -48,24 +57,26 @@ label {
 }
 
 #container {
-  width: 785px;
+  width: 960px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 50px;
+  margin-bottom: 50px;
   background-color: #FFF;
   overflow: auto;
-  min-height: 800px;
   z-index: -1;
+  padding-bottom: 50px;
 }
 
 #main {
   float: left;
+  width: 650px;
   padding: 0px 25px;
 }
 
 div.content {
-  width: 505px;
-  padding: 13px 0px 10px 0px;
+  width: 650px;
+  padding: 0px 0px 10px 0px;
   height: 100%;
   margin-bottom: 20px;
   position: relative;
@@ -81,7 +92,7 @@ h2.post_title, #sidebar h2 {
   border-bottom: 1px dotted #000;
 }
 
-#post_title, #post_body, #post_labels {
+#post_title, #post_body, #post_label {
   width: 400px;
   font-family: "lucida sans unicode", Helvetica, Arial, sans-serif;
 }
@@ -95,9 +106,17 @@ ul.tag {
 
 .tag li {
   display: inline-block;
+}
+
+.tag a {
+  background-color: black;
+  color: white;
   padding: 0px 5px;
   margin: 2px 0px;
-  background-color: black;
+}
+
+.tag a:hover {
+  background-color: red;
   color: white;
 }
 

@@ -22,9 +22,9 @@
 <h2>Tags</h2>
 <br />
 <ul class="tag">
-  <li>Personal</li>
-  <li>Web Programming</li>
-  <li>Mathematics</li>
-  <li>Music</li>
+  <% labels = Label.all %>
+  <% for l in labels %>
+    <li><%= l.label_name %></li>
+  <% end %>
 </ul>
    

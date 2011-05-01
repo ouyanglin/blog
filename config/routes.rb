@@ -9,5 +9,7 @@ Blog::Application.routes.draw do
   match '/about' => 'pages#about'
   match '/dashboard' => 'pages#dashboard'
 
+  match '/label/:id' => 'labels#show', :as => "label"
+
   root :to => "pages#home"
 end
