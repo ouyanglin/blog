@@ -1,5 +1,7 @@
 <div class="content">
-  <h2 class="post_title"><%= link_to post.title, post_path(post) %></h2>
+  <h2 class="post_title">
+    <%= link_to post.title, post_path(post, :anchor => "disqus_thread") %>
+  </h2>
   <span class="post_date">
     <%= post.created_at.localtime.strftime("%A %B %e, %Y at %I:%M %p %Z") %>
   </span>
@@ -11,7 +13,7 @@
       <% end %>
     </ul>
     <div class="comments">
-      <%= link_to "Comments", post_path(post, :anchor => "disqus_thread") %>
+      <%= link_to "Comments", post_path(post) %>
     </div>
   </div>
 </div>
