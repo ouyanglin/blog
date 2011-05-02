@@ -3,7 +3,15 @@ class PagesController < ApplicationController
 
   def home
     @title = "Home"
-    @posts = Post.all
+    if params[:page]
+      @page = params[:page].to_i - 1
+    else
+      @page = 0
+    end
+    post_display = 5
+    @count = Post.count
+    offset_num = @page*post_display
+    @posts = Post.limit(post_display).offset(offset_num)
   end
 
   def about

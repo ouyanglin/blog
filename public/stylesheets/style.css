@@ -106,6 +106,7 @@ ul.tag {
 
 .tag li {
   display: inline-block;
+  padding-bottom: 5px;
 }
 
 .tag a {
@@ -148,4 +149,8 @@ div.comments {
   float: right;
   margin-left: auto;
   font-weight: bold;
+}
+
+#pagination {
+  text-align: right;
 }

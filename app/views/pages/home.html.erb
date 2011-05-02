@@ -1,1 +1,14 @@
 <%= render @posts %>
+<% page_num = @page+1 %>
+<div id="pagination">
+<% if @count > page_num*5 %>
+  <%= link_to "Next Page", url_for(:page => page_num+1) %>
+<% end %>
+<% if @count > page_num*5 && page_num > 1 %>
+  &nbsp;|&nbsp;
+<% end %>
+<% if page_num > 1 %>
+  <%= link_to "Previous Page", url_for(:page => page_num-1) %>
+<% end %>
+</div>
+
