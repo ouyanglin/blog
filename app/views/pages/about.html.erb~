@@ -5,4 +5,7 @@
   </span>
   <p>Hi, my name's Lin and this is my personal blog. After completing Michael Hartl's <a href="http://railstutorial.org">Rails Tutorial</a>, I thought I'd try making a blog from scratch. This is the result.</p>
   <p>You can find me on the web in a lot of places. Try <a href="http://twitter.com/TeamFTF">Twitter</a> for starters.</p>
+  <h3>A disclaimer for Internet Explorer users</h3>
+  <p>If you're using Internet Explorer, you might be wondering to yourself, why are the size of the headings unnatural? Why does the title of the page not line up correctly with the text?</p>
+  <p>Well, the reason why is because I didn't bother trying to style the site correctly for IE users. Most, if not all, of my friends who I show this blog to use Firefox or Chrome, which renders my site perfectly fine, so I didn't feel motivated to learn about all the nuances of how IE renders CSS code. If you use IE, I suggest you just download <a href='http://www.mozilla.com/en-US/firefox/fx/'>Firefox</a> or <a href='http://www.google.com/chrome/intl/en/make/download.html?brand=CHKZ'>Chrome.</a></p>
 </div>

@@ -1,6 +1,6 @@
 <div class="content">
   <h2 class="post_title">
-    <%= link_to post.title, post_path(post, :anchor => "disqus_thread") %>
+    <%= link_to post.title, post_path(post) %>
   </h2>
   <span class="post_date">
     <%= post.created_at.localtime.strftime("%A %B %e, %Y at %I:%M %p %Z") %>
@@ -13,7 +13,9 @@
       <% end %>
     </ul>
     <div class="comments">
-      <%= link_to "Comments", post_path(post) %>
+      <a href='<%= post_path(post, :anchor => "disqus_thread") %>' data-disqus-identifier ='linsblog_<%= post.id %>' >
+        Comments
+      </a>
     </div>
   </div>
 </div>
