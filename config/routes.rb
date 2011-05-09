@@ -1,13 +1,15 @@
 Blog::Application.routes.draw do
   resources :sessions, :only => [:new, :create, :destroy]
   resources :users
-  resources :posts
+  resources :posts, :only => [:create, :destroy, :edit, :update, :new]
 
   match '/signin'  => 'sessions#new'
   match '/signout' => 'sessions#destroy'
 
   match '/about' => 'pages#about'
   match '/dashboard' => 'pages#dashboard'
+
+  match '/posts/:title' => 'posts#show'
 
   match '/label/:id' => 'labels#show', :as => "label"
 
