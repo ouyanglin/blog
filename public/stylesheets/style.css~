@@ -154,3 +154,8 @@ div.comments {
 #pagination {
   text-align: right;
 }
+
+iframe {
+  margin: 15px auto;
+  display: block;
+}
