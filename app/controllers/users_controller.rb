@@ -28,7 +28,7 @@ class UsersController < ApplicationController
       :consumer_secret => ENV['CONSUMER_SECRET'] || @@config['consumer_secret']
     )
 
-    acess_token = @client.authorize(session[:request_token],
+    access_token = @client.authorize(session[:request_token],
                                     session[:request_token_secret],
                                     :oauth_verifier => params[:oauth_verifier])
 

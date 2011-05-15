@@ -33,8 +33,8 @@ class UsersController < ApplicationController
                                     :oauth_verifier => params[:oauth_verifier])
 
     if @client.authorized?
-      session[:access_token] = access_token.token
-      session[:secret_token] = access_token.secret
+      @user.access_token = access_token.token
+      @user.access_secret = access_token.secret
       redirect_to dashboard_path
     else
       redirect_to root_path
