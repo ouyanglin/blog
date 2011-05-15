@@ -35,8 +35,8 @@ class UsersController < ApplicationController
     if @client.authorized?
       @user.access_token = access_token.token
       @user.access_secret = access_token.secret
+      @user.save
       flash[:success] = "it worked!"
-      @client.update('checking out the twitter_oauth library')
       redirect_to dashboard_path
     else
       redirect_to root_path
