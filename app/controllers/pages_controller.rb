@@ -21,6 +21,7 @@ class PagesController < ApplicationController
   def dashboard
     @title = "Dashboard"
     @posts = Post.all
+    @user = current_user
   end
 
   private

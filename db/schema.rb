@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110407052356) do
+ActiveRecord::Schema.define(:version => 20110515171940) do
 
   create_table "label_posts", :force => true do |t|
     t.integer  "label_id"
@@ -47,6 +47,8 @@ ActiveRecord::Schema.define(:version => 20110407052356) do
     t.datetime "updated_at"
     t.string   "encrypted_password"
     t.string   "salt"
+    t.string   "access_token"
+    t.string   "access_secret"
   end
 
   add_index "users", ["display_name"], :name => "index_users_on_display_name", :unique => true

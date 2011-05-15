@@ -1,6 +1,12 @@
 <div class="content">
   <h2>Dashboard</h2>
-  <p><%= link_to "Create a new post!", '/posts/new' %></p>
+  <% if @user.access_token %>
+    <p>You are currently linked to your Twitter account</p>
+  <% else %>
+    <p>You are not linked with your Twitter account. 
+    <%= link_to 'Click here', request_token_path %> to activate!</p>
+  <% end %>
+  <h3><%= link_to "Create a new post!", '/posts/new' %></h3>
   <ol id="post_list">
     <% for p in @posts %>
       <li>

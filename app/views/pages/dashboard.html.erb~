@@ -1,6 +1,15 @@
 <div class="content">
   <h2>Dashboard</h2>
-  <p><%= link_to "Create a new post!", '/posts/new' %></p>
+  <% flash.each do |key, value| %>
+    <div class="flash <%= key %>"><%= value %></div>
+  <% end %>
+  <% if @user.access_token %>
+    <p>You are currently linked to your Twitter account</p>
+  <% else %>
+    <p>You are not linked with your Twitter account. 
+    <%= link_to 'Click here', request_token_path %> to activate!</p>
+  <% end %>
+  <h3><%= link_to "Create a new post!", '/posts/new' %></h3>
   <ol id="post_list">
     <% for p in @posts %>
       <li>
@@ -8,7 +17,7 @@
       &nbsp;&nbsp;&nbsp;</div>
       <div class="li_title"><%= p.title %></div>
       <div class="li_links">
-        <%= link_to "edit", edit_post_path(p) %>&nbsp;
+        <%= link_to "edit", edit_post_path(p) %>
         | <%= link_to "delete", p, :method => :delete,:confirm => "You sure?",
           :title => "Delete #{p.title}" %>
       </div></li>
