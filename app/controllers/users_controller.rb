@@ -35,6 +35,7 @@ class UsersController < ApplicationController
     if @client.authorized?
       @user.access_token = access_token.token
       @user.access_secret = access_token.secret
+      flash[:success] = "it worked!"
       redirect_to dashboard_path
     else
       redirect_to root_path

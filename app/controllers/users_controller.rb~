@@ -28,13 +28,14 @@ class UsersController < ApplicationController
       :consumer_secret => ENV['CONSUMER_SECRET'] || @@config['consumer_secret']
     )
 
-    acess_token = @client.authorize(session[:request_token],
+    access_token = @client.authorize(session[:request_token],
                                     session[:request_token_secret],
                                     :oauth_verifier => params[:oauth_verifier])
 
     if @client.authorized?
       @user.access_token = access_token.token
       @user.access_secret = access_token.secret
+      flash[:success] = "it worked!"
       redirect_to dashboard_path
     else
       redirect_to root_path
