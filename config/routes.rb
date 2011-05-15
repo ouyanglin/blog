@@ -10,6 +10,7 @@ Blog::Application.routes.draw do
   match '/dashboard' => 'pages#dashboard'
 
   match '/request_token' => 'users#request_token'
+  match '/access' => 'users#access'
 
   match '/posts/:title' => 'posts#show'
 
