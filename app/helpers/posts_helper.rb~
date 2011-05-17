@@ -1,0 +1,6 @@
+module PostsHelper
+
+  def update_twitter
+  end
+
+end
