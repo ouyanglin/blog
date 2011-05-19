@@ -82,7 +82,7 @@ div.content {
   position: relative;
 }
 
-span.post_date p.credit-source {
+span.post_date, p.credit-source {
   font-size: 0.75em;
   color: #484848;
 }
